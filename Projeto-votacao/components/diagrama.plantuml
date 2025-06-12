@@ -1,0 +1,13 @@
+@startuml
+title Diagrama de Componentes - Sistema de Votação
+
+package "Sistema de Votação" {
+  [AutenticacaoService] --> [Repositorio]
+  [GestaoUtilizadoresService] --> [Repositorio]
+  [GestaoCandidatosService] --> [Repositorio]
+  [GestaoVotacaoService] --> [Repositorio]
+  [ProcessoVotacaoService] --> [Repositorio]
+
+  [Repositorio] <<Base de Dados>>
+}
+@enduml
